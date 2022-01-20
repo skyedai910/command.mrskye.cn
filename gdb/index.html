@@ -8,7 +8,7 @@
 
 
   
-  <title>GLIBC | 不可避免的备忘单</title>
+  <title>GDB | 不可避免的备忘单</title>
   
     <link rel="icon" href="/img/favicon.min.webp">
   
@@ -40,20 +40,16 @@
   <div id="container">
     <div id="wrap">
       <div class="outer">
-        <section id="main"><article id="post-Binary Reverse/glibc" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-gdb" class="article article-type-post" itemscope itemprop="blogPost">
   <div class='body-area'>
     <header class='main-heading -center' role='banner'>
-      <h1 class='h1'> GLIBC <em></em></h1>
+      <h1 class='h1'> GDB <em>8.3.1</em></h1>
     </header>
   
   
     <main class='post-content MarkdownBody' data-js-main-body data-js-anchors role='main'>
-      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="强行加载特定版本"><a href="#强行加载特定版本" class="headerlink" title="强行加载特定版本"></a>强行加载特定版本</h3><pre><code class="language-bash"># 只修改 libc.so
-LD_PRELOAD=/path/to/libc.so.6 ./pwn
-</code></pre>
-<pre><code class="language-bash"># 修改 ld.so、libc.so
-LD_PRELOAD=/path/to/libc.so.6;
-/path/to/ld.so ./pwn
+      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="configer"><a href="#configer" class="headerlink" title="configer"></a>configer</h3><pre><code class="language-bash"># the configuration file is ~/.gdbinit
+set disassembly-flavor intel
 </code></pre>
 
     </main>
