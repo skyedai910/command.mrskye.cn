@@ -8,7 +8,7 @@
 
 
   
-  <title>树莓派4B | 不可避免的备忘单</title>
+  <title>flask-session-cookie-manager | 不可避免的备忘单</title>
   
     <link rel="icon" href="/img/favicon.min.webp">
   
@@ -40,26 +40,22 @@
   <div id="container">
     <div id="wrap">
       <div class="outer">
-        <section id="main"><article id="post-树莓派4B" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Flask/flask-session-cookie-manager" class="article article-type-post" itemscope itemprop="blogPost">
   <div class='body-area'>
     <header class='main-heading -center' role='banner'>
-      <h1 class='h1'> 树莓派4B <em></em></h1>
+      <h1 class='h1'> flask-session-cookie-manager <em>1.2.1.1</em></h1>
     </header>
   
   
     <main class='post-content MarkdownBody' data-js-main-body data-js-anchors role='main'>
-      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="APT更换国内源"><a href="#APT更换国内源" class="headerlink" title="APT更换国内源"></a>APT更换国内源</h3><pre><code class="language-bash"># 编辑/etc/apt/sources.list文件，注释掉原内容，用以下内容替代
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster main contrib non-free
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-updates main contrib non-free
-deb https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian/ buster-backports main contrib non-free
-deb https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/debian-security buster/updates main contrib non-free
-
-# 编辑/etc/apt/sources.list.d/raspi.list文件，注释掉原内容，用以下内容代替
-deb http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/ buster main ui
+      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="解密-session"><a href="#解密-session" class="headerlink" title="解密 session"></a>解密 session</h3><pre><code class="language-bash"># 解密json键值对没有base64解码，还是使用P神的解密脚本
+# 自行选择python2/3
+python(2/3) flask_session_cookie_manager(2/3).py decode -c &lt;session&gt;
+</code></pre>
+<h3 id="加密-session"><a href="#加密-session" class="headerlink" title="加密 session"></a>加密 session</h3><pre><code class="language-bash"># 获取SECRET_KEY前提下，用于伪造session
+# session内json键值对需要是明文无编码
+# 自行选择python2/3
+python(2/3) flask_session_cookie_manager(2/3).py encode -s &quot;SECRET_KEY&quot; -t &quot;会话信息&quot;
 </code></pre>
 
     </main>
