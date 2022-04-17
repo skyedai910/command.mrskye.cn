@@ -8,7 +8,7 @@
 
 
   
-  <title>GDB | 不可避免的备忘单</title>
+  <title>gdb | 不可避免的备忘单</title>
   
     <link rel="icon" href="/img/favicon.min.webp">
   
@@ -43,13 +43,15 @@
         <section id="main"><article id="post-gdb" class="article article-type-post" itemscope itemprop="blogPost">
   <div class='body-area'>
     <header class='main-heading -center' role='banner'>
-      <h1 class='h1'> GDB <em>8.3.1</em></h1>
+      <h1 class='h1'> gdb <em>8.3.1</em></h1>
     </header>
   
   
     <main class='post-content MarkdownBody' data-js-main-body data-js-anchors role='main'>
       <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="configer"><a href="#configer" class="headerlink" title="configer"></a>configer</h3><pre><code class="language-bash"># the configuration file is ~/.gdbinit
 set disassembly-flavor intel
+</code></pre>
+<h3 id="连接远程调试服务器"><a href="#连接远程调试服务器" class="headerlink" title="连接远程调试服务器"></a>连接远程调试服务器</h3><pre><code class="language-bash">target remote &lt;ip&gt;:&lt;port&gt;
 </code></pre>
 
     </main>
