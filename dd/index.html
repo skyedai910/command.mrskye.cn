@@ -8,7 +8,7 @@
 
 
   
-  <title>Awesome in linux | 不可避免的备忘单</title>
+  <title>dd | 不可避免的备忘单</title>
   
     <link rel="icon" href="/img/favicon.min.webp">
   
@@ -40,28 +40,20 @@
   <div id="container">
     <div id="wrap">
       <div class="outer">
-        <section id="main"><article id="post-Awesome_in_linux" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-dd" class="article article-type-post" itemscope itemprop="blogPost">
   <div class='body-area'>
     <header class='main-heading -center' role='banner'>
-      <h1 class='h1'> Awesome in linux <em></em></h1>
+      <h1 class='h1'> dd <em></em></h1>
     </header>
   
   
     <main class='post-content MarkdownBody' data-js-main-body data-js-anchors role='main'>
-      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="查找大文件"><a href="#查找大文件" class="headerlink" title="查找大文件"></a>查找大文件</h3><pre><code class="language-bash">sudo find / -size +10000k -exec ls -lh &#123;&#125; \;
-</code></pre>
-<h3 id="查询文件"><a href="#查询文件" class="headerlink" title="查询文件"></a>查询文件</h3><pre><code class="language-bash"># file_name支持正则:&#39;*flag*&#39;
-find &lt;dir&gt; -name &quot;&lt;file_name&gt;&quot;
-</code></pre>
-<h3 id="查找文件的内容"><a href="#查找文件的内容" class="headerlink" title="查找文件的内容"></a>查找文件的内容</h3><pre><code class="language-bash">grep -rn &quot;&lt;file_data&gt;&quot;
-</code></pre>
-<pre><code class="language-bash">find &lt;dir&gt; &#39;*&#39; | xargs grep &quot;&lt;file_data&gt;&quot;
-</code></pre>
-<h2 id="查看Linux系统开机启动信息"><a href="#查看Linux系统开机启动信息" class="headerlink" title="查看Linux系统开机启动信息"></a>查看Linux系统开机启动信息</h2><pre><code class="language-bash">sudo dmesg
-</code></pre>
-<h2 id="查询端口及对应程序"><a href="#查询端口及对应程序" class="headerlink" title="查询端口及对应程序"></a>查询端口及对应程序</h2><pre><code class="language-bash">#-a:查看所有服务器端口
-#-p:查看服务端口并显示对应的程序名
-netstat -ap
+      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="更换-ld-so"><a href="#更换-ld-so" class="headerlink" title="更换 ld.so"></a>更换 ld.so</h3><pre><code class="language-bash">#if=文件名：输入文件名
+#of=文件名：输出文件名
+#skip=blocks：从输入文件开头跳过blocks个块后再开始复制
+#bs=bytes：同时设置读入/输出的块大小为bytes个字节
+#count=blocks：仅拷贝blocks个块，块大小等于ibs指定的字节数
+dd if=WAG120N-EU-ANNEXB-ETSI-1.00.16code.bin bs=1 skip=11076 count=10 of=uboot.lzma
 </code></pre>
 
     </main>
