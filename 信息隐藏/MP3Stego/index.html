@@ -8,7 +8,7 @@
 
 
   
-  <title>patchelf | 不可避免的备忘单</title>
+  <title>MP3Stego | 不可避免的备忘单</title>
   
     <link rel="icon" href="/img/favicon.min.webp">
   
@@ -40,21 +40,17 @@
   <div id="container">
     <div id="wrap">
       <div class="outer">
-        <section id="main"><article id="post-patchelf" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-信息隐藏/MP3Stego" class="article article-type-post" itemscope itemprop="blogPost">
   <div class='body-area'>
     <header class='main-heading -center' role='banner'>
-      <h1 class='h1'> patchelf <em></em></h1>
+      <h1 class='h1'> MP3Stego <em></em></h1>
     </header>
   
   
     <main class='post-content MarkdownBody' data-js-main-body data-js-anchors role='main'>
-      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="更换-ld-so"><a href="#更换-ld-so" class="headerlink" title="更换 ld.so"></a>更换 ld.so</h3><pre><code class="language-bash"># –set-interpreter 将旧的 ld.so 替换为要加载的 ld.so
-patchelf --set-interpreter /path/to/ld.so ./pwn
+      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="提取隐写文件"><a href="#提取隐写文件" class="headerlink" title="提取隐写文件"></a>提取隐写文件</h3><pre><code class="language-bash">MP3StegoDecode.exe -X -P 密码 MP3文件名
 </code></pre>
-<h3 id="更换-libc-so"><a href="#更换-libc-so" class="headerlink" title="更换 libc.so"></a>更换 libc.so</h3><pre><code class="language-bash"># –replace-needed 将旧的 libc.so 替换成要加载的 libc.so
-patchelf --replace-needed libc.so.6 /path/to/libc.so ./pwn
-#or
-patchelf --replace-needed /path/to/old_libc.so /path/to/new_libc.so elf
+<h3 id="嵌入文件"><a href="#嵌入文件" class="headerlink" title="嵌入文件"></a>嵌入文件</h3><pre><code class="language-powershell">MP3StegoEncode.exe -E 加密的txt文件 -P 密码 加密的wav文件 输出的MP3文件名 
 </code></pre>
 
     </main>

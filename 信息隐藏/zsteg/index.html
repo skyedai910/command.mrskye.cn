@@ -8,7 +8,7 @@
 
 
   
-  <title>patchelf | 不可避免的备忘单</title>
+  <title>zsteg | 不可避免的备忘单</title>
   
     <link rel="icon" href="/img/favicon.min.webp">
   
@@ -40,21 +40,22 @@
   <div id="container">
     <div id="wrap">
       <div class="outer">
-        <section id="main"><article id="post-patchelf" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-信息隐藏/zsteg" class="article article-type-post" itemscope itemprop="blogPost">
   <div class='body-area'>
     <header class='main-heading -center' role='banner'>
-      <h1 class='h1'> patchelf <em></em></h1>
+      <h1 class='h1'> zsteg <em></em></h1>
     </header>
   
   
     <main class='post-content MarkdownBody' data-js-main-body data-js-anchors role='main'>
-      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="更换-ld-so"><a href="#更换-ld-so" class="headerlink" title="更换 ld.so"></a>更换 ld.so</h3><pre><code class="language-bash"># –set-interpreter 将旧的 ld.so 替换为要加载的 ld.so
-patchelf --set-interpreter /path/to/ld.so ./pwn
+      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="查看-lsb-数据"><a href="#查看-lsb-数据" class="headerlink" title="查看 lsb 数据"></a>查看 lsb 数据</h3><pre><code class="language-bash">zsteg xxx.bmp
+zsteg xxx.png
+zsteg -a (文件名)    #查看各个通道的lsb
 </code></pre>
-<h3 id="更换-libc-so"><a href="#更换-libc-so" class="headerlink" title="更换 libc.so"></a>更换 libc.so</h3><pre><code class="language-bash"># –replace-needed 将旧的 libc.so 替换成要加载的 libc.so
-patchelf --replace-needed libc.so.6 /path/to/libc.so ./pwn
-#or
-patchelf --replace-needed /path/to/old_libc.so /path/to/new_libc.so elf
+<h3 id="检测-zlib"><a href="#检测-zlib" class="headerlink" title="检测 zlib"></a>检测 zlib</h3><pre><code class="language-bash">#-b的位数是从1开始的
+zsteg zlib.bmp -b 1 -o xy -v
+</code></pre>
+<h3 id="提取该通道图片"><a href="#提取该通道图片" class="headerlink" title="提取该通道图片"></a>提取该通道图片</h3><pre><code class="language-bash">zsteg -e b8,a,lsb,xy 文件.png -&gt; out.png
 </code></pre>
 
     </main>

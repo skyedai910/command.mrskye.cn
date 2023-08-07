@@ -63,6 +63,13 @@ find &lt;dir&gt; -name &quot;&lt;file_name&gt;&quot;
 #-p:查看服务端口并显示对应的程序名
 netstat -ap
 </code></pre>
+<h2 id="复制文件并创建文件路径"><a href="#复制文件并创建文件路径" class="headerlink" title="复制文件并创建文件路径"></a>复制文件并创建文件路径</h2><pre><code class="language-bash">cp --parents /etc/config/test.sh .
+</code></pre>
+<h2 id="Vmware挂载共享文件夹"><a href="#Vmware挂载共享文件夹" class="headerlink" title="Vmware挂载共享文件夹"></a>Vmware挂载共享文件夹</h2><pre><code class="language-bash">#uid、gid根据使用者id自行调整，用id命令查询
+sudo /usr/bin/vmhgfs-fuse .host:/ /mnt/hgfs -o allow_other -o uid=1000 -o gid=1000 -o umask=022
+#取消挂载
+sudo umount /mnt/hgfs
+</code></pre>
 
     </main>
   </div>

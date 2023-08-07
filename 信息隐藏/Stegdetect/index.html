@@ -8,7 +8,7 @@
 
 
   
-  <title>patchelf | 不可避免的备忘单</title>
+  <title>Stegdetect | 不可避免的备忘单</title>
   
     <link rel="icon" href="/img/favicon.min.webp">
   
@@ -40,21 +40,25 @@
   <div id="container">
     <div id="wrap">
       <div class="outer">
-        <section id="main"><article id="post-patchelf" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-信息隐藏/Stegdetect" class="article article-type-post" itemscope itemprop="blogPost">
   <div class='body-area'>
     <header class='main-heading -center' role='banner'>
-      <h1 class='h1'> patchelf <em></em></h1>
+      <h1 class='h1'> Stegdetect <em></em></h1>
     </header>
   
   
     <main class='post-content MarkdownBody' data-js-main-body data-js-anchors role='main'>
-      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="更换-ld-so"><a href="#更换-ld-so" class="headerlink" title="更换 ld.so"></a>更换 ld.so</h3><pre><code class="language-bash"># –set-interpreter 将旧的 ld.so 替换为要加载的 ld.so
-patchelf --set-interpreter /path/to/ld.so ./pwn
-</code></pre>
-<h3 id="更换-libc-so"><a href="#更换-libc-so" class="headerlink" title="更换 libc.so"></a>更换 libc.so</h3><pre><code class="language-bash"># –replace-needed 将旧的 libc.so 替换成要加载的 libc.so
-patchelf --replace-needed libc.so.6 /path/to/libc.so ./pwn
-#or
-patchelf --replace-needed /path/to/old_libc.so /path/to/new_libc.so elf
+      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="检测隐写"><a href="#检测隐写" class="headerlink" title="检测隐写"></a>检测隐写</h3><pre><code class="language-bash">#-q:仅显示可能包含隐藏内容的图像。
+#-n:启用检查JPEG文件头功能，以降低误报率，如果启用，所有带有批注区域的文件将被视为没有被嵌入信息，如果JPEG文件的JFIF标识符中的版本号不是1.1.则禁用OutGuess检测。
+#-s:修改检测算法的敏感度，该值的默认值为1。检测结果的匹配度与检测算法的敏感度成正比，算法敏感度的#值越大，检测出的可疑文件包含敏感信息的可能性越大。
+#-d:打印带行号的调试信息。
+#-t:设置要检测哪些隐写工具（默认检测jopi），可设置的选项如下：
+#    j 检测图像中的信息是否是用steg嵌入的。
+#    o检测图像中的信息是否是用outouess嵌入的。
+#    p检测图像中的信息是否是用jphide嵌入的。
+#    i检测图像中的信息是否是用invisible secrets嵌入的。
+
+.\stegdetect.exe -t jopi -s 10.0 .\welcome.jpeg
 </code></pre>
 
     </main>
