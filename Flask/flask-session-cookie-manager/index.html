@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+
+  
+  <title>flask-session-cookie-manager | 不可避免的备忘单</title>
+  
+    <link rel="icon" href="/img/favicon.min.webp">
+  
+  
+<link rel="stylesheet" href="/css/bundle.css">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+    <nav class='top-nav' data-js-no-preview role='navigation'>
+  <div class='container'>
+      <div class='left'>
+        <a class='home back-button' href='/'></a>
+      </div>
+
+      <div class='actions'>
+          <ul class='page-actions'>
+            <li class='link github -button hint--bottom' data-hint='Welcome to my blog'>
+              <a target="_blank" rel="noopener" href='https://www.mrskye.cn/'>
+                <span class='text -visible'>Welcome to my blog</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"><article id="post-Flask/flask-session-cookie-manager" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class='body-area'>
+    <header class='main-heading -center' role='banner'>
+      <h1 class='h1'> flask-session-cookie-manager <em>1.2.1.1</em></h1>
+    </header>
+  
+  
+    <main class='post-content MarkdownBody' data-js-main-body data-js-anchors role='main'>
+      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="解密-session"><a href="#解密-session" class="headerlink" title="解密 session"></a>解密 session</h3><pre><code class="language-bash"># 解密json键值对没有base64解码，还是使用P神的解密脚本
+# 自行选择python2/3
+python(2/3) flask_session_cookie_manager(2/3).py decode -c &lt;session&gt;
+</code></pre>
+<h3 id="加密-session"><a href="#加密-session" class="headerlink" title="加密 session"></a>加密 session</h3><pre><code class="language-bash"># 获取SECRET_KEY前提下，用于伪造session
+# session内json键值对需要是明文无编码
+# 自行选择python2/3
+python(2/3) flask_session_cookie_manager(2/3).py encode -s &quot;SECRET_KEY&quot; -t &quot;会话信息&quot;
+</code></pre>
+
+    </main>
+  </div>
+  
+  <div class='pre-footer' data-js-no-preview><i class='icon'></i></div>
+    
+</article>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<script src="/js/article.js"></script>
+
+
+
+</section>
+      </div>
+    </div>                
+    <!-- <nav id="mobile-nav">
+  
+</nav> -->
+    <!-- 
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+
+
+ -->
+  </div>
+
+</body>
+</html>

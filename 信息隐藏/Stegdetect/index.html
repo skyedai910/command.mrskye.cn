@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+
+  
+  <title>Stegdetect | 不可避免的备忘单</title>
+  
+    <link rel="icon" href="/img/favicon.min.webp">
+  
+  
+<link rel="stylesheet" href="/css/bundle.css">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+    <nav class='top-nav' data-js-no-preview role='navigation'>
+  <div class='container'>
+      <div class='left'>
+        <a class='home back-button' href='/'></a>
+      </div>
+
+      <div class='actions'>
+          <ul class='page-actions'>
+            <li class='link github -button hint--bottom' data-hint='Welcome to my blog'>
+              <a target="_blank" rel="noopener" href='https://www.mrskye.cn/'>
+                <span class='text -visible'>Welcome to my blog</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"><article id="post-信息隐藏/Stegdetect" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class='body-area'>
+    <header class='main-heading -center' role='banner'>
+      <h1 class='h1'> Stegdetect <em></em></h1>
+    </header>
+  
+  
+    <main class='post-content MarkdownBody' data-js-main-body data-js-anchors role='main'>
+      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="检测隐写"><a href="#检测隐写" class="headerlink" title="检测隐写"></a>检测隐写</h3><pre><code class="language-bash">#-q:仅显示可能包含隐藏内容的图像。
+#-n:启用检查JPEG文件头功能，以降低误报率，如果启用，所有带有批注区域的文件将被视为没有被嵌入信息，如果JPEG文件的JFIF标识符中的版本号不是1.1.则禁用OutGuess检测。
+#-s:修改检测算法的敏感度，该值的默认值为1。检测结果的匹配度与检测算法的敏感度成正比，算法敏感度的#值越大，检测出的可疑文件包含敏感信息的可能性越大。
+#-d:打印带行号的调试信息。
+#-t:设置要检测哪些隐写工具（默认检测jopi），可设置的选项如下：
+#    j 检测图像中的信息是否是用steg嵌入的。
+#    o检测图像中的信息是否是用outouess嵌入的。
+#    p检测图像中的信息是否是用jphide嵌入的。
+#    i检测图像中的信息是否是用invisible secrets嵌入的。
+
+.\stegdetect.exe -t jopi -s 10.0 .\welcome.jpeg
+</code></pre>
+
+    </main>
+  </div>
+  
+  <div class='pre-footer' data-js-no-preview><i class='icon'></i></div>
+    
+</article>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<script src="/js/article.js"></script>
+
+
+
+</section>
+      </div>
+    </div>                
+    <!-- <nav id="mobile-nav">
+  
+</nav> -->
+    <!-- 
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+
+
+ -->
+  </div>
+
+</body>
+</html>

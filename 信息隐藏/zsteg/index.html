@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+
+
+  
+  <title>zsteg | 不可避免的备忘单</title>
+  
+    <link rel="icon" href="/img/favicon.min.webp">
+  
+  
+<link rel="stylesheet" href="/css/bundle.css">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<meta name="generator" content="Hexo 6.0.0"></head>
+
+<body>
+    <nav class='top-nav' data-js-no-preview role='navigation'>
+  <div class='container'>
+      <div class='left'>
+        <a class='home back-button' href='/'></a>
+      </div>
+
+      <div class='actions'>
+          <ul class='page-actions'>
+            <li class='link github -button hint--bottom' data-hint='Welcome to my blog'>
+              <a target="_blank" rel="noopener" href='https://www.mrskye.cn/'>
+                <span class='text -visible'>Welcome to my blog</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+  </div>
+</nav>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"><article id="post-信息隐藏/zsteg" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class='body-area'>
+    <header class='main-heading -center' role='banner'>
+      <h1 class='h1'> zsteg <em></em></h1>
+    </header>
+  
+  
+    <main class='post-content MarkdownBody' data-js-main-body data-js-anchors role='main'>
+      <h2 id="get-started"><a href="#get-started" class="headerlink" title="get started"></a>get started</h2><h3 id="查看-lsb-数据"><a href="#查看-lsb-数据" class="headerlink" title="查看 lsb 数据"></a>查看 lsb 数据</h3><pre><code class="language-bash">zsteg xxx.bmp
+zsteg xxx.png
+zsteg -a (文件名)    #查看各个通道的lsb
+</code></pre>
+<h3 id="检测-zlib"><a href="#检测-zlib" class="headerlink" title="检测 zlib"></a>检测 zlib</h3><pre><code class="language-bash">#-b的位数是从1开始的
+zsteg zlib.bmp -b 1 -o xy -v
+</code></pre>
+<h3 id="提取该通道图片"><a href="#提取该通道图片" class="headerlink" title="提取该通道图片"></a>提取该通道图片</h3><pre><code class="language-bash">zsteg -e b8,a,lsb,xy 文件.png -&gt; out.png
+</code></pre>
+
+    </main>
+  </div>
+  
+  <div class='pre-footer' data-js-no-preview><i class='icon'></i></div>
+    
+</article>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/prism.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.17.1/plugins/autoloader/prism-autoloader.min.js"></script>
+
+<script src="/js/article.js"></script>
+
+
+
+</section>
+      </div>
+    </div>                
+    <!-- <nav id="mobile-nav">
+  
+</nav> -->
+    <!-- 
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+
+
+ -->
+  </div>
+
+</body>
+</html>
